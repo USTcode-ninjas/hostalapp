@@ -1,0 +1,25 @@
+body{
+	margin: 50px;
+	padding: 5px;
+	display: flex;
+	justify-content: left;
+	align-items: left;
+	min-height:10vh;
+	font-family: 'Jost', sans-serif;
+	 /* background: linear-gradient(to bottom, #0f0c29, #e289db, #24243e); */
+	background-image:url("download.jpg");
+	background-repeat: no-repeat;
+	background-size:cover;
+	
+}
+.main{
+	width: 500px;
+	height: 200px;
+	/* background: red; */
+	background: linear-gradient(to bottom, #0f0c29, #ca32be, #9999da);
+	overflow: hidden;
+	
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+	 
+}
