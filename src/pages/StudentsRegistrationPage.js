@@ -32,7 +32,7 @@ export default function StudentsRegistrationPage(){
                 <button type="submit">Submit</button>
             </form>
             <p>
-                <Link to ="../Registration">Registration</Link>
+                <Link to ="/">Go back to login page</Link>
             </p>
         </div>
     )
