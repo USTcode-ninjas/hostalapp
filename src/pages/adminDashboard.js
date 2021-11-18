@@ -9,9 +9,9 @@ export default function AdminDashboard(){
             <h2>B{c}B</h2>
             <ul>
                 <li><Link to ="/AdminDashboard/AdminProfile">Admin</Link></li>
-                <li><Link to ="/AdminDashboard/OwnerDetails">Owner Details</Link></li>
+                <li><Link to ="/AdminDashboard/OwnerDetail">Owner Details</Link></li>
                 <li><Link to ="/AdminDashboard/StudentDetails">Student details</Link></li>
-                <li><Link to ="/">Sign out</Link></li>
+                <li><Link to ="/" className="nav_buttom">Sign out</Link></li>
             </ul>
             </div>
             <div>

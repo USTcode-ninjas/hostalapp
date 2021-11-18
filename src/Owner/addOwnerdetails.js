@@ -1,23 +1,27 @@
 import React from "react";
 // import { Link } from "react-router-dom";
-import DashboardPages from "../pages/dashboardPage";
+import OwnerPages from "../pages/dashboardPage";
 export default function AddOwnerdetails(){
     return(
-        <div className="addDetails">
+        <div className="addDetails ">
             <div className="divDash"> 
-                <DashboardPages/>
+                <OwnerPages/>
             </div>
             <div className="addDetil">
             <h1>addOwnerdetails</h1>
             <form>
                 <section>
-                    <input type="text" name ="Name" placeholder="Name"/>
+                    <input type="text" name ="Hostelname" placeholder="Hostelname"/>
+                </section>
+                
+                <section>
+                    <input type="text" name ="Ownername" placeholder="Ownername"/>
                 </section>
                 <section>
-                    <input type="text" name ="Username" placeholder="Room details"/>
+                    <input type="text" name ="Room details" placeholder="Room details"/>
                 </section>
                 <section>
-                    <input type="number" name ="number" placeholder="Number of vacant rooms"/>
+                    <input type="number" name ="Number of vacant rooms" placeholder="Number of vacant rooms"/>
                 </section>
                 <section>
                     <input type="address" name ="Location" placeholder="location"/>
@@ -29,7 +33,7 @@ export default function AddOwnerdetails(){
                     <input type="file" name ="Rate" placeholder="Room Image"/>
                 </section>
                 {/* <section>
-                    <input type="number" name ="number" placeholder="Phone Number"/>
+                    <input type="number" name ="number" placeholder="Phone1 Number"/>
                 </section> */}
                 <button type="submit">uploading</button>
             </form>

@@ -1,12 +1,13 @@
 import { useState, useMemo } from 'react'
 import { sortRows, filterRows, paginateRows } from './helpers'
 import { Pagination } from './pagination'
+import './table.css'
 
 export const Table = ({ columns, rows }) => {
   const [activePage, setActivePage] = useState(1)
   const [filters, setFilters] = useState({})
   const [sort, setSort] = useState({ order: 'asc', orderBy: 'id' })
-  
+
   const rowsPerPage = 3
 
   const filteredRows = useMemo(() => filterRows(rows, filters), [rows, filters])
@@ -47,10 +48,11 @@ export const Table = ({ columns, rows }) => {
     setActivePage(1)
     setFilters({})
   }
+  
 
   return (
     <>
-      <table>
+      <table className="sortTable">
         <thead>
           <tr>
             {columns.map((column) => {
@@ -96,8 +98,13 @@ export const Table = ({ columns, rows }) => {
                   if (column.format) {
                     return <td key={column.accessor}>{column.format(row[column.accessor])}</td>
                   }
-                  return <td key={column.accessor}>{row[column.accessor]}</td>
-                })}
+                  return <td key={column.accessor}>{row[column.accessor]}</td> 
+                  
+                }
+                )}
+                <td><button onClick ={() =>{
+                                columns.deleteUser(row.id)
+                            }} className ="Button muted-button"type ="submit">del</button></td>
               </tr>
             )
           })}

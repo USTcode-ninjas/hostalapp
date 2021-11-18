@@ -1,25 +1,25 @@
 import React from "react";
+// import { Table } from "./table";
 
 const UserTable = props=>(
-    <table>
+    <table className = "">
         <thead>
-            <tr>
-                <th>Itemname</th>
-                <th>Description</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Stock received Dat</th>
-            </tr>
+                <th>Student Name</th>        
+                <th>EmailId</th>
+                <th>Username</th>
+                <th>College Name</th>
+                <th>Course Name</th>
+                {/* <th>Phone</th> */}
         </thead>
         <tbody>
             {props.users.length > 0 ?(
                 props.users.map(user =>(
                     <tr key={user.id}>
-                        <td>{user.itemname}</td>
-                        <td>{user.description}</td>
-                        <td>{user.price}</td>
-                        <td>{user.quantity}</td>
-                        <td>{user.stockreceivedDate}</td>
+                        <td>{user.StudentName}</td>
+                        <td>{user.EmailId}</td>
+                        <td>{user.Username}</td>
+                        <td>{user.CollegeName}</td>
+                        <td>{user.CourseName}</td>
                         <td>
                             <button onClick ={() =>{
                                 props.editRow(user)

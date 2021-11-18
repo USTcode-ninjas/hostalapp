@@ -1,11 +1,11 @@
 import React from "react";
+import OwnerPages from "../pages/dashboardPage";
 // import { Link } from "react-router-dom";
-import DashboardPages from "../pages/dashboardPage";
 export default function Profile(){
     return(
         <div className="addDetails">
             <div className="divDash"> 
-                <DashboardPages/>
+                <OwnerPages/>
             </div>
             <div className="addDetil1">
             <div className ="">

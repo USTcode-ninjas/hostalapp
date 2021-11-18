@@ -14,11 +14,28 @@ export default function OwnerDetails(){
     //         }),
     //     })
     // }
+
+    // const columns = [
+    //     { accessor: 'Name', label: 'Name' },
+    //     { accessor: 'EmailId', label: 'EmailId' },
+    //     { accessor: 'Username', label: 'Username'},
+    //     { accessor: 'CollegeName', label: 'CollegeName' },
+    //     { accessor: 'CourseName', label: 'CourseName'}
+    //   ]
+    //   const userData=[
+    //     {id:1,Name:{},EmailId:'sai@gamil.com', Username:'sai',CollegeName:'ssce',CourseName:'cse'},
+    
+    //   ]
+
+    const [editing,setEditing] =  useState(false)
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [users, setUsers] = useState([]);
     // const [userAddress, setUserAddress] = useState([]);
-    
+    const deleteUser = id =>{
+        setEditing(false)
+        setUsers(users.filter(user => user.id !== id))
+      }
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/users/")
             .then(res => res.json())
@@ -67,12 +84,13 @@ if (error) {
                             <td>collage</td>
                             <td>4.5</td>
                             <td><img src="/images/tree.avif"alt ="tree" width="50px"/></td>
-                            <td><button className = "button_del" >Delete</button></td>
+                            <td><button className = "button_del" onClick={deleteUser} >Delete</button></td>
                         </tr>
                         ))}
                     </tbody>
                     
                 </table>
+                
             </div>
         </div>
         </div>
