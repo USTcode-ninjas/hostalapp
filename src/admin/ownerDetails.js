@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AdminDashboard from "../pages/adminDashboard";
+import { Table } from '../action/table';
+
 // import { Link } from "react-router-dom";
 // import DashboardPages from "../pages/dashboardPage";
 export default function OwnerDetails(){
@@ -14,18 +16,19 @@ export default function OwnerDetails(){
     //         }),
     //     })
     // }
-
-    // const columns = [
-    //     { accessor: 'Name', label: 'Name' },
-    //     { accessor: 'EmailId', label: 'EmailId' },
-    //     { accessor: 'Username', label: 'Username'},
+    
+    const columns = [
+        { accessor: 'Name', label: 'Name' },
+        { accessor: 'EmailId', label: 'EmailId' },
+        { accessor: 'Username', label: 'Username'},
     //     { accessor: 'CollegeName', label: 'CollegeName' },
     //     { accessor: 'CourseName', label: 'CourseName'}
-    //   ]
-    //   const userData=[
-    //     {id:1,Name:{},EmailId:'sai@gamil.com', Username:'sai',CollegeName:'ssce',CourseName:'cse'},
+      ]
+      const userData=[
+        {id:1,Name:'',EmailId:'', Username:''},
     
-    //   ]
+      ]
+      const [rows,SetRows] = useState(userData);
 
     const [editing,setEditing] =  useState(false)
     const [error, setError] = useState(null);
@@ -62,7 +65,7 @@ if (error) {
                 <AdminDashboard/>
             </div>
             <div className="owner_det">
-            <div className ="">
+            {/* <div className ="">
                 <table>
                     <thead>
                         <th>Name</th>
@@ -91,7 +94,8 @@ if (error) {
                     
                 </table>
                 
-            </div>
+            </div> */}
+            {/* <Table rows={rows} columns={columns} deleteUser={deleteUser} /> */}
         </div>
         </div>
         );
