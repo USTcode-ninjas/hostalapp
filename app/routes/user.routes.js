@@ -15,7 +15,7 @@ module.exports = function(app) {
   app.get("/api/test/user", [authJwt.verifyToken], controller.studentBoard);
 
   app.get(
-    "/api/test/mod",
+    "/api/test/owner",
     [authJwt.verifyToken, authJwt.isOwner],
     controller.ownerBoard
   );
